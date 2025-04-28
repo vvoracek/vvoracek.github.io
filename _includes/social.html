@@ -1,0 +1,29 @@
+<div class="horizontal-social-list">
+  {%- if site.github_username -%}
+  <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}" title="{{ site.github_username | escape }}" class="social-icon">
+    <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+  </a>
+  {%- endif -%}
+  
+  {%- if site.twitter_username -%}
+  <a href="https://twitter.com/{{ site.twitter_username | cgi_escape | escape }}" title="{{ site.twitter_username | escape }}" class="social-icon">
+    <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+  </a>
+  {%- endif -%}
+  
+  {%- if site.google_scholar -%}
+  <a href="https://scholar.google.com/citations?user={{ site.google_scholar | cgi_escape | escape }}" title="Google Scholar" class="social-icon">
+    <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+    </svg>
+  </a>
+  {%- endif -%}
+
+  {%- for mst in site.minima.social_links -%}
+    {%- if mst.platform == "github" -%}
+      <a href="https://github.com/{{ mst.user_url }}" title="{{ mst.platform | capitalize }}" class="social-icon">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

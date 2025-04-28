@@ -1,0 +1,30 @@
+# Site settings
+title: Václav Voráček
+email: vasek.voracek@gmail.com
+description: ""
+baseurl: "" # leave empty for user site
+url: "https://your-username.github.io"
+twitter_username: VaclavVoracekCZ
+github_username:  vvoracek
+google_scholar: Db13d44AAAAJ
+
+# Build settings
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+#  - research.md
+  - publications.md
+#  - teaching.md
+  - blog.md
+
+# Collections
+collections:
+  papers:
+    output: true
