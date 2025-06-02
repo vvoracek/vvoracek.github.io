@@ -1,21 +1,79 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+<style>
+  .post-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, sans-serif;
+    line-height: 1.75;
+    color: #333;
+  }
+
+  .post-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #111;
+  }
+
+  .post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .post-content {
+    text-align: justify;
+  }
+
+  .post-content h2,
+  .post-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .post-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .post-content blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    color: #666;
+    margin: 1.5rem 0;
+  }
+</style>
+  
+<article class="post h-entry max-w-3xl mx-auto px-6 py-12 bg-white shadow-md rounded-2xl" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header mb-8 border-b pb-6">
+    <h1 class="post-title p-name text-4xl font-bold text-gray-900 mb-2" itemprop="name headline">
+      {{ page.title | escape }}
+    </h1>
+    <p class="post-meta text-sm text-gray-500 flex items-center space-x-2">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+        <span>•</span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card font-medium text-gray-700" itemprop="name">{{ page.author }}</span>
+        </span>
+      {%- endif -%}
+    </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content prose prose-lg prose-gray" itemprop="articleBody">
     {{ content }}
   </div>
 
