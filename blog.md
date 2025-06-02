@@ -127,7 +127,6 @@ permalink: /blog/
 <div class="clean-container">
   <div class="blog-header">
     <h1 class="blog-title">Blog</h1>
-    <p class="blog-subtitle">Here I share thoughts, tutorials, and insights on mathematics, machine learning, and academic life.</p>
   </div>
 
   <div class="post-list-container">
