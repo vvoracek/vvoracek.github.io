@@ -3,6 +3,20 @@
 
 @import "minima";
 
+// Default 130% zoom
+body {
+  transform: scale(1.3);
+  transform-origin: top left;
+  width: 76.92%; // 100/1.3 to prevent horizontal scroll
+  min-height: 76.92vh;
+}
+
+// Adjust wrapper to maintain centering
+.wrapper {
+  max-width: 615px; // 800px / 1.3
+}
+
+
 // Custom styling
 body {
   font-family: 'Roboto', Arial, sans-serif;
