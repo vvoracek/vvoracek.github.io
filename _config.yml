@@ -16,7 +16,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
+  - jekyll-redirect-from
 # Navigation
 header_pages:
 #  - research.md
@@ -28,3 +28,6 @@ header_pages:
 collections:
   papers:
     output: true
+
+
+

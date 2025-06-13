@@ -6,6 +6,8 @@ gem "jekyll-feed", "~> 0.12"
 gem "jekyll-seo-tag"
 gem "webrick", "~> 1.7"  # Add this line for Ruby 3.0+ compatibility
 gem 'ffi', '~> 1.15.5'
+gem "jekyll-redirect-from"
+
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
