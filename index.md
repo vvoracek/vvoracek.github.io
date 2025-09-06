@@ -6,7 +6,7 @@ layout: home
 
 
 
-I am an (incoming) postdoc at KAUST with Francesco Orabona. I am broadly interested in theoretical aspects of machine learning, mainly:
+I am a quant in Second Foundation, Prague. I am broadly interested in theoretical aspects of machine learning, mainly:
 
 - Concentration inequalities/sequences via betting
 - Trustworthy machine learning
